@@ -6,17 +6,16 @@ const router = Router();
 router.get('/documento', async  (req, res) => {
   console.log("ingreso felix");
 
-  // try {
-  //   const getDataPersonal = await DataPerfil.find();
-  //   if (!getDataPersonal) {
-  //     return res.status(404).send();
-  //   }
-  //   return res.status(200).json(getDataPersonal);
-  // } catch (error) {
-  //   // return handleErrorDatabase(res, error);
-  //   res.json({ mensaje: '¡Todo Salio Mal' });
-  // }
-  console.log("jajajaj")
+  try {
+    const getDataPersonal = await DataPerfil.find();
+    if (!getDataPersonal) {
+      return res.status(404).send();
+    }
+    return res.status(200).json(getDataPersonal);
+  } catch (error) {
+    // return handleErrorDatabase(res, error);
+    res.json({ mensaje: '¡Todo Salio Mal' });
+  }
 
   
 });
