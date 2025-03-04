@@ -7,12 +7,7 @@ const PORT = process.env.PORT || 5000; // Usa la variable de entorno PORT
 const mongoURI = process.env.MONGODB_ATLAS_CNN; // Usa la variable de entorno MONGODB_ATLAS_CNN
 
 // Conexión a MongoDB Atlas
-mongoose.connect(mongoURI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-  useFindAndModify: false,
-  useCreateIndex: true,
-})
+mongoose.connect(mongoURI)
   .then(() => console.log('Conectado a MongoDB Atlas'))
   .catch((err) => console.error('Error al conectar a MongoDB:', err));
 
