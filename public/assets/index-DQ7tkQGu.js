@@ -14146,7 +14146,7 @@ function _v() {
           className: "read-the-docs",
           children: "Click on the Vite and React logos to learn more",
         }),
-        Lt.jsx("h1", { children: "Documento desde MongoDB2:" }),
+        Lt.jsx("h1", { children: "Documento desde MongoDB3:" }),
         r
           ? Lt.jsxs("p", { children: ["Nombre: ", r.nombre] })
           : Lt.jsx("p", { children: "Cargando documento..." }),

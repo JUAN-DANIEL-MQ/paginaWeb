@@ -16,6 +16,7 @@ router.get('/documento', async  (req, res) => {
     // return handleErrorDatabase(res, error);
     res.json({ mensaje: '¡Todo Salio Mal' });
   }
+  console.log("jajajaj")
 
   
 });
