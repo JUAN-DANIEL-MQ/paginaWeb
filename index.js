@@ -1,22 +1,22 @@
-const express = require('express');
-const mongoose = require('mongoose');
-require('dotenv').config(); // Cargar las variables de entorno
+const express = require("express");
+const mongoose = require("mongoose");
+require("dotenv").config(); // Cargar las variables de entorno
 
 const app = express();
-const PORT = process.env.PORT || 5000; // Usa la variable de entorno PORT
-const mongoURI = process.env.MONGODB_ATLAS_CNN; // Usa la variable de entorno MONGODB_ATLAS_CNN
+const PORT = process.env.PORT || 5000;
 
 // Conexión a MongoDB Atlas
-mongoose.connect(mongoURI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-})
-  .then(() => console.log('Conectado a MongoDB Atlas'))
-  .catch((err) => console.log('Error al conectar a MongoDB: ', err));
+mongoose
+  .connect(process.env.MONGODB_ATLAS_CNN, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
+  .then(() => console.log("Conectado a MongoDB Atlas"))
+  .catch((err) => console.log("Error al conectar a MongoDB: ", err));
 
 // Ruta de prueba
-app.get('/', (req, res) => {
-  res.send('¡Backend funcionando correctamente!');
+app.get("/", (req, res) => {
+  res.send("¡Backend funcionando correctamente!");
 });
 
 // Iniciar servidor
