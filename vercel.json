@@ -1,17 +1,22 @@
-{
+  {
     "version": 2,
     "builds": [
       {
         "src": "app.js",
         "use": "@vercel/node"
+      },
+      {
+        "src": "public/assets/*",
+        "use": "@vercel/static"
+      },
+      {
+        "src": "public/index.html",
+        "use": "@vercel/static"
       }
-      
     ],
     "routes": [
-      {
-        "src": "/api/documento",
-        "dest": "/api/documento.js"
-      }
+      { "src": "/api/(.*)", "dest": "/app.js" },
+      { "src": "/assets/(.*)", "dest": "/public/assets/$1" },
+      { "src": "/(.*)", "dest": "/public/index.html" }
     ]
   }
-  
