@@ -13,7 +13,7 @@ mongoose.connect(mongoURI, {
   useFindAndModify: false,
   useCreateIndex: true,
 })
-  .then(() => console.log('Conectado a MongoDB Atlas'))
+  .then(() => console.log('Conectado a MongoDB Atlas Juan Ese Era el Problema siiiiiii'))
   .catch((err) => console.error('Error al conectar a MongoDB:', err));
 
 // Ruta de prueba
