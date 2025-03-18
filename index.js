@@ -25,7 +25,7 @@ mongoose
   .catch((err) => console.error("Error al conectar a MongoDB:", err));
 
 // Ruta para obtener los perfiles
-app.get("/perfiles", async (req, res) => {
+app.get("/", async (req, res) => {
   try {
     const perfiles = await Perfil.find(); // Obtener todos los perfiles
     res.json(perfiles); // Enviar los perfiles como respuesta JSON
