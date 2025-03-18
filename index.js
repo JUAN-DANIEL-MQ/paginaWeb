@@ -13,7 +13,7 @@ mongoose.connect(mongoURI)
 
 // Ruta de prueba
 app.get('/', (req, res) => {
-  res.send('¡Backend funcionando correctamente!');
+  res.send('¡Backend funcionando correctamente JUAN DANIEL !');
 });
 
 // Iniciar servidor
