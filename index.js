@@ -21,7 +21,14 @@ mongoose
 
     try {
       const perfiles = await Perfil.find(); // Obtener todos los perfiles
-      console.log("Perfiles en la base de datos:", perfiles);
+      if (perfiles.length > 0) {
+        console.log("Aquí están los perfiles en la base de datos:");
+        perfiles.forEach((perfil) => {
+          console.log(`- ${perfil.nombre}`);
+        });
+      } else {
+        console.log("No se encontraron perfiles en la base de datos.");
+      }
     } catch (error) {
       console.error("Error al obtener los perfiles:", error);
     }
